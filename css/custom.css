@@ -1303,7 +1303,7 @@ body {
 
 .currency-wrapper-mobile {
     color: white;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     font-weight: 500;
 }
 
@@ -1313,7 +1313,7 @@ body {
 }
 
 .mobile-logo {
-    max-height: 50px;
+    max-height: 70px;
     width: auto;
 }
 
@@ -1532,7 +1532,7 @@ select:focus,
     }
 
     .mobile-logo {
-        max-height: 40px;
+        max-height: 60px;
     }
 
     .promo-card {
