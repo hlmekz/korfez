@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#1f5b7e">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Körfez.biz | Türkiye'den Körfez'e Ticaret Köprüsü</title>
+    <!-- Bulma CSS framework -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+
+    <!-- Top Concave Bar -->
+    <div class="top-wave-container is-hidden-mobile">
+        <div class="top-wave-red">
+            <div class="container h-100 is-flex is-align-items-center">
+                <span class="top-slogan-text">"Türkiye'nin üretim gücünü Körfez'e taşıyan dijital tedarik platformu:
+                    korfez.biz ile inşaata dair her şey artık bir tık uzağınızda!"</span>
+            </div>
+            <div class="wave-shape"></div>
+        </div>
+        <div class="top-wave-blue">
+            <div class="currency-wrapper">
+                <span>1 USD = 40 TL</span>
+                <span class="ml-3">1 EUR = 45 TL</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Top Bar -->
+    <div class="mobile-top-bar is-hidden-tablet">
+        <div class="currency-wrapper-mobile">
+            <span>1 USD = 40 TL</span>
+            <span class="mx-3">1 EUR = 45 TL</span>
+        </div>
+    </div>
+
+    <!-- Main Header Area -->
+    <header class="main-header pt-4 pb-2">
+        <div class="container">
+            <!-- Mobile Header Row -->
+            <div
+                class="is-hidden-tablet mobile-header-row is-flex is-justify-content-space-between is-align-items-center mb-3">
+                <a href="#" class="mobile-logo-link">
+                    <img src="images/logo.png" alt="Körfez.biz Logo" class="mobile-logo"
+                        onerror="this.onerror=null;this.src='https://placehold.co/150x60?text=Korfez.biz';">
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Menüyü aç" aria-expanded="false"
+                    aria-controls="mobile-nav-menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+
+            <!-- Top Row: Logo, Search, Auth (Desktop) -->
+            <div class="columns is-vcentered is-hidden-mobile">
+                <!-- Logo -->
+                <div class="column is-3">
+                    <a href="#" class="is-flex is-align-items-center">
+                        <img src="images/logo.png" alt="Körfez.biz Logo" style="max-height: 100px;"
+                            onerror="this.onerror=null;this.src='https://placehold.co/200x80?text=Korfez.biz';">
+                    </a>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="column is-5">
+                    <div class="custom-search-container">
+                        <label for="header-search" class="is-sr-only">Ürün ve şirket ara</label>
+                        <input type="text" id="header-search" class="custom-search-input"
+                            placeholder="Ürün ve şirket ara..." aria-label="Ürün ve şirket ara">
+                        <button class="search-icon-btn" aria-label="Ara"><i class="fas fa-search"
+                                aria-hidden="true"></i></button>
+                        <div class="search-category-select" role="button" tabindex="0" aria-haspopup="listbox"
+                            aria-label="Kategori seçin">
+                            <span>TÜM ÜRÜNLER</span>
+                            <i class="fas fa-chevron-down ml-2" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Login / Action -->
+                <div class="column is-4 has-text-right is-flex is-flex-direction-column is-align-items-end">
+                    <div class="top-links mb-3">
+                        <a href="#">Biz Kimiz?</a>
+                        <span>•</span>
+                        <a href="#">SSS</a>
+                        <span>•</span>
+                        <a href="#">İletişim</a>
+                        <div class="lang-dropdown ml-3">
+                            <button class="button is-small is-white lang-btn">TR <i
+                                    class="fas fa-caret-down ml-2"></i></button>
+                        </div>
+                    </div>
+                    <div class="is-flex is-align-items-center">
+                        <span class="slogan-micro mr-3 is-hidden-touch">Güçlü ticari bağlar kurun.</span>
+                        <a href="#" class="button is-danger is-rounded px-5 header-auth-btn">ÜYE OL • GİRİŞ YAP</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Row: Pill Navigation (Grouped Style) - Desktop Only -->
+            <nav class="pill-nav-container mt-3 is-hidden-touch" aria-label="Ana navigasyon">
+
+                <!-- Group 1: Sectors & Suppliers (Fade Effect Border) -->
+                <div class="nav-pill-group">
+                    <a href="#" class="nav-item-link">SEKTÖRLER</a>
+                    <span class="nav-dot" aria-hidden="true">•</span>
+                    <a href="#" class="nav-item-link">TEDARİKÇİLER</a>
+                </div>
+
+                <!-- Group 2: Projects & Ads (Fade Effect Border) -->
+                <div class="nav-pill-group ml-4">
+                    <a href="#" class="nav-item-link">PROJE YATIRIMCILARI</a>
+                    <span class="nav-dot" aria-hidden="true">•</span>
+                    <a href="#" class="nav-item-link">İLANLAR / TEKLİF TALEPLERİ</a>
+                </div>
+
+                <!-- Group 3: Product Categories (Full Border & Dark Icon) -->
+                <div class="nav-pill-group full-border ml-4 pr-1">
+                    <a href="#" class="nav-item-link">ÜRÜN KATEGORİLERİ</a>
+                    <span class="icon-circle-dark ml-2">
+                        <i class="fas fa-chevron-down has-text-white" aria-hidden="true"></i>
+                    </span>
+                </div>
+
+            </nav>
+
+            <!-- Mobile Navigation Menu -->
+            <nav id="mobile-nav-menu" class="mobile-nav-menu is-hidden" aria-label="Mobil navigasyon">
+                <div class="mobile-nav-content">
+                    <!-- Mobile Search -->
+                    <div class="mobile-search-box mb-4">
+                        <label for="mobile-search" class="is-sr-only">Ara</label>
+                        <input type="text" id="mobile-search" class="mobile-search-input"
+                            placeholder="Ürün ve şirket ara..." aria-label="Ara">
+                        <button class="mobile-search-btn" aria-label="Ara"><i class="fas fa-search"
+                                aria-hidden="true"></i></button>
+                    </div>
+
+                    <ul class="mobile-nav-list">
+                        <li><a href="#" class="mobile-nav-link">Sektörler</a></li>
+                        <li><a href="#" class="mobile-nav-link">Tedarikçiler</a></li>
+                        <li><a href="#" class="mobile-nav-link">Proje Yatırımcıları</a></li>
+                        <li><a href="#" class="mobile-nav-link">İlanlar / Teklif Talepleri</a></li>
+                        <li><a href="#" class="mobile-nav-link">Ürün Kategorileri</a></li>
+                        <li class="mobile-nav-divider"></li>
+                        <li><a href="#" class="mobile-nav-link">Biz Kimiz?</a></li>
+                        <li><a href="#" class="mobile-nav-link">SSS</a></li>
+                        <li><a href="#" class="mobile-nav-link">İletişim</a></li>
+                    </ul>
+
+                    <div class="mobile-nav-actions mt-4">
+                        <a href="#" class="button is-danger is-fullwidth is-medium">ÜYE OL • GİRİŞ YAP</a>
+                    </div>
+
+                    <div class="mobile-lang-select mt-3">
+                        <button class="button is-small is-light is-fullwidth lang-btn-mobile">TR <i
+                                class="fas fa-caret-down ml-2" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Hero Banner (Logistics) -->
+    <section class="section p-0 mt-4">
+        <div class="container">
+            <div class="hero-banner-wrapper" style="padding: 0; background: none;">
+                <img src="images/slider1.jpg" alt="Körfez.biz Banner"
+                    style="width: 100%; height: 100%; object-fit: cover; display: block;"
+                    onerror="this.onerror=null;this.src='https://placehold.co/1200x400?text=Slider+Image';">
+
+                <!-- Visual Slider Navigation (Dots) -->
+                <div class="slider-navigation">
+                    <span class="slider-dot is-active"></span>
+                    <span class="slider-dot"></span>
+                    <span class="slider-dot"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Companies Slider -->
+    <section class="section companies-section py-5">
+        <div class="container">
+            <div class="level is-mobile mb-4">
+                <div class="level-left">
+                    <h3 class="title is-5 uppercase-text">ÖNE ÇIKAN SATICILAR</h3>
+                    <span class="mx-2">|</span>
+                    <a href="#" class="is-size-7">Tüm Satıcılar</a>
+                </div>
+                <div class="level-right">
+                    <button class="button is-small is-rounded nav-arrow-btn"><i
+                            class="fas fa-chevron-left"></i></button>
+                    <button class="button is-small is-rounded ml-2 nav-arrow-btn"><i
+                            class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <div class="columns is-mobile is-multiline is-centered">
+                <!-- Company Item 1 -->
+                <div class="column is-6-mobile is-one-fifth-desktop">
+                    <div class="box company-box">
+                        <div class="company-logo-area">
+                            <!-- Using icon as placeholder for logo image -->
+                            <img src="https://placehold.co/150x80?text=CONSTRUCTION" alt="Company 1">
+                        </div>
+                        <div class="company-name-area">
+                            <span class="company-name-text">ŞİRKET ÖRNEK #1</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Company Item 2 -->
+                <div class="column is-6-mobile is-one-fifth-desktop">
+                    <div class="box company-box">
+                        <div class="company-logo-area">
+                            <img src="https://placehold.co/150x80?text=SteelWork" alt="Company 2">
+                        </div>
+                        <div class="company-name-area">
+                            <span class="company-name-text">ŞİRKET ÖRNEK #2</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Company Item 3 -->
+                <div class="column is-6-mobile is-one-fifth-desktop">
+                    <div class="box company-box">
+                        <div class="company-logo-area">
+                            <img src="https://placehold.co/150x80?text=ASS+PEN" alt="Company 3">
+                        </div>
+                        <div class="company-name-area">
+                            <span class="company-name-text">ŞİRKET ÖRNEK #3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Company Item 4 -->
+                <div class="column is-6-mobile is-one-fifth-desktop">
+                    <div class="box company-box">
+                        <div class="company-logo-area">
+                            <img src="https://placehold.co/150x80?text=HANDYMAN" alt="Company 4">
+                        </div>
+                        <div class="company-name-area">
+                            <span class="company-name-text">ŞİRKET ÖRNEK #4</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Company Item 5 -->
+                <div class="column is-6-mobile is-one-fifth-desktop">
+                    <div class="box company-box">
+                        <div class="company-logo-area">
+                            <img src="https://placehold.co/150x80?text=PLISER" alt="Company 5">
+                        </div>
+                        <div class="company-name-area">
+                            <span class="company-name-text">ŞİRKET ÖRNEK #5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Bar -->
+    <!-- Filter Bar -->
+    <section class="section filter-section py-5">
+        <div class="container">
+            <div class="filter-wrapper-box">
+                <div class="filter-label">
+                    <span>ÜRÜNLER</span>
+                </div>
+                <div class="filter-inputs">
+                    <div class="control is-expanded">
+                        <label for="filter-sector" class="is-sr-only">Sektör seçin</label>
+                        <div class="select is-fullwidth">
+                            <select id="filter-sector" aria-label="Sektör seçin">
+                                <option>İNŞAAT</option>
+                                <option>KİMYA</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="control is-expanded">
+                        <label for="filter-category" class="is-sr-only">Kategori seçin</label>
+                        <div class="select is-fullwidth">
+                            <select id="filter-category" aria-label="Kategori seçin">
+                                <option>YAPI ELEMANLARI</option>
+                                <option>TESİSAT</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="control is-expanded">
+                        <label for="filter-product" class="is-sr-only">Ürün tipi seçin</label>
+                        <div class="select is-fullwidth">
+                            <select id="filter-product" aria-label="Ürün tipi seçin">
+                                <option>SERAMİK, FAYANS</option>
+                                <option>BOYA</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <button class="button filter-btn" aria-label="Ürünleri listele">LİSTELE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Grid -->
+    <section class="section products-section">
+        <div class="container">
+            <div class="level is-mobile mb-4">
+                <div class="level-left">
+                    <h3 class="title is-5 has-text-grey-dark uppercase-text">ÖNE ÇIKAN ÜRÜNLER</h3>
+                    <span class="mx-2 has-text-grey-light">|</span>
+                    <a href="#" class="is-size-7 has-text-link">Tüm Ürünler</a>
+                </div>
+                <div class="level-right">
+                    <button class="button is-small is-rounded nav-arrow-btn"><i
+                            class="fas fa-chevron-left"></i></button>
+                    <button class="button is-small is-rounded ml-2 nav-arrow-btn"><i
+                            class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <div class="columns is-multiline">
+                <!-- Product 1 -->
+                <div class="column is-12-mobile is-4-tablet is-4-desktop">
+                    <div class="card product-card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://placehold.co/640x480?text=Seramik+Koleksiyonu" alt="Seramik">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <a href="#" class="product-company-link">Isparta Seramik</a>
+                            <a href="#" class="product-name-link">Toptan Fayans ve Seramik</a>
+                            <p class="product-official-name">ISPARTA SERAMİK SAN. TİC.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="column is-12-mobile is-4-tablet is-4-desktop">
+                    <div class="card product-card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://placehold.co/640x480?text=Gaz+Beton" alt="Gaz Beton">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <a href="#" class="product-company-link">KÇS GAZBETON</a>
+                            <a href="#" class="product-name-link">Tuğla, Bims, Gaz Beton</a>
+                            <p class="product-official-name">KÇS GAZBETON SAN. LTD.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="column is-12-mobile is-4-tablet is-4-desktop">
+                    <div class="card product-card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://placehold.co/640x480?text=Aluminyum" alt="Aluminyum">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <a href="#" class="product-company-link">RESMAN</a>
+                            <a href="#" class="product-name-link">Alüminyum Profil</a>
+                            <p class="product-official-name">RESMAN CAM PVC SAN.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 (New) -->
+                <div class="column is-12-mobile is-4-tablet is-4-desktop">
+                    <div class="card product-card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://placehold.co/640x480?text=Boya+Kimyasallari" alt="Boya">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <a href="#" class="product-company-link">Polisan</a>
+                            <a href="#" class="product-name-link">Dış Cephe Boyası</a>
+                            <p class="product-official-name">POLİSAN KANSAI BOYA A.Ş.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 (New) -->
+                <div class="column is-12-mobile is-4-tablet is-4-desktop">
+                    <div class="card product-card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://placehold.co/640x480?text=Cimento" alt="Cimento">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <a href="#" class="product-company-link">Çimsa</a>
+                            <a href="#" class="product-name-link">Gri Portland Çimento</a>
+                            <p class="product-official-name">ÇİMSA ÇİMENTO SAN. VE TİC.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 (New) -->
+                <div class="column is-12-mobile is-4-tablet is-4-desktop">
+                    <div class="card product-card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://placehold.co/640x480?text=Demir+Celik" alt="Demir">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <a href="#" class="product-company-link">Kardemir</a>
+                            <a href="#" class="product-name-link">İnşaat Demiri Ø12-32</a>
+                            <p class="product-official-name">KARABÜK DEMİR ÇELİK FAB.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info & Promos -->
+    <!-- Info & Promos -->
+    <section class="section promo-cards-section py-5">
+        <div class="container">
+            <div class="columns is-variable is-4">
+                <!-- Card 1: Logistics -->
+                <div class="column is-12-mobile is-6-desktop">
+                    <div class="promo-card card-logistics">
+                        <!-- Text Content -->
+                        <div class="promo-content">
+                            <small class="has-text-white">korfez.biz</small>
+                            <h4 class="title is-4 has-text-white mb-2">Lojistik Çözümleri</h4>
+                            <p class="has-text-white is-size-7 mb-4" style="max-width: 60%;">Türkiye'den Körfez'e
+                                Lojistikte Güvenli ve Hızlı Köprü!</p>
+                            <button class="button">İNCELE</button>
+                        </div>
+                        <!-- Placehold.co used for background graphic (Logistics theme) -->
+                        <img src="https://placehold.co/400x300/00446c/FFF?text=Image" class="promo-bg-img"
+                            style="object-position: right; opacity: 0.5; mask-image: linear-gradient(to left, black, transparent);"
+                            alt="Lojistik">
+                    </div>
+                </div>
+
+                <!-- Card 2: What is Korfez (Video) -->
+                <div class="column is-12-mobile is-3-desktop">
+                    <div class="promo-card card-video">
+                        <div class="promo-content">
+                            <h4 class="title is-4 has-text-white mb-1">Körfez.biz Nedir?</h4>
+                            <a href="#" class="has-text-white" style="text-decoration: underline;">Tanıtım Videosu</a>
+                        </div>
+                        <!-- Play Button Icon floating -->
+                        <div class="play-icon-wrapper">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                        <img src="https://placehold.co/400x300/ff0000/FFF?text=Image" class="promo-bg-img"
+                            style="object-position: right bottom; width: 60%; left: auto; right: 0; mask-image: linear-gradient(to left, black 60%, transparent);"
+                            alt="Video">
+                    </div>
+                </div>
+
+                <!-- Card 3: Register -->
+                <div class="column is-12-mobile is-3-desktop">
+                    <div class="promo-card card-register">
+                        <img src="https://placehold.co/400x300/cccccc/333?text=Image" class="promo-bg-img"
+                            alt="Uyelik api" style="opacity: 0.8;">
+                        <div class="register-btn-wrapper">
+                            <button class="button">NASIL ÜYE OLURUM?</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- B2B Ecosystem/Map Section -->
+    <section class="section b2b-ecosystem has-background-info-dark has-text-white py-6">
+        <div class="b2b-layout-wrapper">
+            <!-- Center Elements -->
+            <div class="b2b-center-divider"></div>
+
+            <div class="b2b-badge-box">B2B</div>
+
+            <div class="b2b-handshake-circle">
+                <img src="https://placehold.co/200x200/bceeff/00446c?text=Handshake" alt="Handshake">
+            </div>
+
+            <!-- Left Side: Buyer/Producer (Turkey) -->
+            <div class="b2b-side">
+                <img src="https://placehold.co/400x300/00446c/FFF?text=Buildings+Illustration" class="b2b-illustration"
+                    alt="Buildings">
+                <p class="b2b-desc-text">Türkiye'nin lider üreticilerine tek tıkla ulaşın. İhtiyacınız olan ürün için
+                    teklif alın, en uygun tedarikçiyi seçin.</p>
+                <a href="#" class="btn-b2b-action btn-buyer">ALICI OLMAK İSTİYORUM!</a>
+            </div>
+
+            <!-- Right Side: Seller/Buyer (Gulf) -->
+            <div class="b2b-side">
+                <img src="https://placehold.co/400x300/00446c/FFF?text=Port+Illustration" class="b2b-illustration"
+                    alt="Port">
+                <p class="b2b-desc-text">Ürünlerinizi Körfez pazarına açın, yeni müşteriler kazanın. Fabrika profilinizi
+                    oluşturun, projelere doğrudan teklif verin.</p>
+                <a href="#" class="btn-b2b-action btn-seller">SATICI OLMAK İSTİYORUM!</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer class="korfez-footer">
+        <div class="footer-main section">
+            <div class="container">
+                <div class="columns is-variable is-4">
+                    <!-- Col 1: Logo & Info -->
+                    <div class="column is-3 footer-col">
+                        <div class="footer-logo mb-5">
+                            <img src="images/logo-footer.png" alt="Körfez.biz" style="max-height: 80px;">
+                        </div>
+                        <div class="footer-info">
+                            <p class="mb-2"><span class="fl-label">Adres :</span></p>
+                            <br>
+                            <p class="mb-2"><span class="fl-label">Tel :</span></p>
+                            <p class="mb-2"><span class="fl-label">Mail :</span></p>
+                        </div>
+                    </div>
+                    <!-- Col 2: Placeholder -->
+                    <div class="column is-3 footer-col">
+                        <div class="footer-box-placeholder"></div>
+                    </div>
+                    <!-- Col 3: Placeholder -->
+                    <div class="column is-3 footer-col">
+                        <div class="footer-box-placeholder"></div>
+                    </div>
+                    <!-- Col 4: Placeholder -->
+                    <div class="column is-3 footer-col border-none">
+                        <div class="footer-box-placeholder"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container is-fluid p-0 h-100">
+                <div class="footer-bar-wrapper">
+                    <div class="copyright-text">
+                        &copy; 2025 Körfez Canlı Ltd. Şti. Tüm hakları saklıdır. | All rights reserved. | <span
+                            style="font-family: 'Arial', sans-serif;">حقوق الطبع والنشر</span>
+                    </div>
+                    <div class="url-tab">
+                        <span>www.korfez.biz</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky Bottom Actions -->
+    <div class="mobile-sticky-actions is-hidden-desktop">
+        <div class="columns is-gapless is-mobile">
+            <div class="column">
+                <a href="#" class="button is-link is-fullwidth is-radiusless h-100">
+                    <span class="icon"><i class="fas fa-user-tie"></i></span>
+                    <span>ALICI OL</span>
+                </a>
+            </div>
+            <div class="column">
+                <a href="#" class="button is-danger is-fullwidth is-radiusless h-100">
+                    <span class="icon"><i class="fas fa-store"></i></span>
+                    <span>SATICI OL</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Körfez.biz | Üyelik Başvurusu</title>
+    <!-- Bulma CSS framework -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+    <style>
+        .form-section-title {
+            border-bottom: 2px solid #f1f1f1;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            color: var(--korfez-navy);
+            font-weight: 700;
+        }
+
+        .form-box {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            padding: 2rem;
+            margin-top: -80px;
+            /* Overlap hero */
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero-register {
+            background-color: var(--korfez-red);
+            height: 300px;
+            display: flex;
+            align-items: flex-start;
+            padding-top: 60px;
+            position: relative;
+        }
+
+        .hero-register::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 300px;
+            height: 100%;
+            background: url('https://via.placeholder.com/300x300?text=Wave') no-repeat bottom right;
+            /* Optional graphic */
+            opacity: 0.1;
+        }
+
+        .step-indicator {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .step-indicator::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #e9ecef;
+            z-index: 0;
+        }
+
+        .step-item {
+            position: relative;
+            z-index: 1;
+            background: white;
+            padding: 0 10px;
+            text-align: center;
+        }
+
+        .step-circle {
+            width: 35px;
+            height: 35px;
+            background: #e9ecef;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 5px;
+            color: #6c757d;
+            font-weight: bold;
+        }
+
+        .step-item.active .step-circle {
+            background: var(--korfez-navy);
+            color: white;
+        }
+
+        .step-item.completed .step-circle {
+            background: var(--korfez-red);
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="has-background-light">
+
+    <!-- Simple Header -->
+    <header class="main-header py-3">
+        <div class="container">
+            <a href="index.html" class="logo-wrapper is-flex is-align-items-center">
+                <span class="logo-text is-size-3 has-text-weight-bold" style="color:var(--korfez-navy)">korfez<span
+                        style="color:var(--korfez-red)">.</span>biz</span>
+                <i class="fas fa-chevron-left ml-2" style="color:var(--korfez-red); font-size:1.5rem"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Background -->
+    <div class="hero-register">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-6 has-text-white">
+                    <h1 class="title is-2 has-text-white">Körfez.biz'e Katılın</h1>
+                    <p class="subtitle is-5 has-text-white-ter">Türkiye ve Körfez arasında güçlü ticaret bağları kurmak
+                        için ilk adımı atın.</p>
+                </div>
+                <div class="column is-6 is-hidden-mobile">
+                    <!-- Image Placeholder for Smiling Professional -->
+                    <img src="https://via.placeholder.com/400x300?text=Professional"
+                        style="float:right; border-radius:10px; opacity:0.9">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="section pt-0">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-10-desktop is-12-tablet">
+                    <div class="form-box">
+
+                        <!-- Stepper -->
+                        <div class="step-indicator">
+                            <div class="step-item active">
+                                <div class="step-circle">1</div>
+                                <span class="is-size-7">Firma Bilgileri</span>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-circle">2</div>
+                                <span class="is-size-7">İletişim</span>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-circle">3</div>
+                                <span class="is-size-7">Faaliyet</span>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-circle">4</div>
+                                <span class="is-size-7">Amaç</span>
+                            </div>
+                        </div>
+
+                        <h2 class="title is-4 has-text-centered mb-5" style="color:var(--korfez-navy)">Körfez.biz Üyelik
+                            Formu</h2>
+                        <p class="has-text-centered has-text-grey mb-6">Lütfen bilgilerinizi eksiksiz doldurunuz.
+                            Başvurunuz değerlendirildikten sonra size dönüş yapılacaktır.</p>
+
+                        <form action="#" method="POST">
+
+                            <!-- Section 1: Firm Info -->
+                            <div class="mb-5">
+                                <h3 class="form-section-title">Şirket ve Temsilci Bilgileri</h3>
+                                <div class="columns is-multiline">
+                                    <div class="column is-6">
+                                        <div class="field">
+                                            <label class="label">Şirket Adı *</label>
+                                            <div class="control">
+                                                <input class="input" type="text" placeholder="Şirketinizin tam ünvanı">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column is-6">
+                                        <div class="field">
+                                            <label class="label">Temsilci Adı-Soyadı *</label>
+                                            <div class="control">
+                                                <input class="input" type="text" placeholder="Yetkili kişi">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column is-6">
+                                        <div class="field">
+                                            <label class="label">Pozisyonu *</label>
+                                            <div class="control">
+                                                <input class="input" type="text" placeholder="Örn: İhracat Müdürü">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column is-6">
+                                        <div class="field">
+                                            <label class="label">Kuruluş Yılı *</label>
+                                            <div class="control">
+                                                <input class="input" type="number" placeholder="YYYY">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Section 2: Contact -->
+                            <div class="mb-5">
+                                <h3 class="form-section-title">İletişim Bilgileri</h3>
+                                <div class="columns is-multiline">
+                                    <div class="column is-6">
+                                        <div class="field">
+                                            <label class="label">Ülke</label>
+                                            <div class="control">
+                                                <div class="select is-fullwidth">
+                                                    <select>
+                                                        <option>Türkiye</option>
+                                                        <option>Katar</option>
+                                                        <option>BAE</option>
+                                                        <option>Suudi Arabistan</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column is-6">
+                                        <div class="field">
+                                            <label class="label">Şehir *</label>
+                                            <div class="control">
+                                                <div class="select is-fullwidth">
+                                                    <select>
+                                                        <option>İstanbul</option>
+                                                        <option>Ankara</option>
+                                                        <option>İzmir</option>
+                                                        <option>Diğer</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column is-6">
+                                        <div class="field">
+                                            <label class="label">Telefon (Uluslararası Format) *</label>
+                                            <div class="control has-icons-left">
+                                                <input class="input" type="tel" placeholder="+90 555 123 45 67">
+                                                <span class="icon is-small is-left"><i class="fas fa-phone"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column is-6">
+                                        <div class="field">
+                                            <label class="label">E-posta Adresi *</label>
+                                            <div class="control has-icons-left">
+                                                <input class="input" type="email" placeholder="ornek@sirket.com">
+                                                <span class="icon is-small is-left"><i
+                                                        class="fas fa-envelope"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Section 3: Activities Settings (Checkbox Grid) -->
+                            <div class="mb-5">
+                                <h3 class="form-section-title">İş Alanı ve Faaliyetler</h3>
+                                <div class="columns">
+                                    <div class="column is-8">
+                                        <div class="columns is-multiline is-mobile">
+                                            <div class="column is-6">
+                                                <label class="checkbox mb-2">
+                                                    <input type="checkbox"> Demir-Çelik
+                                                </label><br>
+                                                <label class="checkbox mb-2">
+                                                    <input type="checkbox"> Seramik - Fayans
+                                                </label><br>
+                                                <label class="checkbox mb-2">
+                                                    <input type="checkbox"> Ahşap - MDF
+                                                </label><br>
+                                                <label class="checkbox mb-2">
+                                                    <input type="checkbox"> İnşaat Kimyasalları
+                                                </label>
+                                            </div>
+                                            <div class="column is-6">
+                                                <label class="checkbox mb-2">
+                                                    <input type="checkbox"> Yalıtım Malzemeleri
+                                                </label><br>
+                                                <label class="checkbox mb-2">
+                                                    <input type="checkbox"> Cam ve Pencere
+                                                </label><br>
+                                                <label class="checkbox mb-2">
+                                                    <input type="checkbox"> Diğer: <input
+                                                        class="input is-small is-inline"
+                                                        style="width:100px; border-bottom:1px solid #ccc; border-top:none; border-left:none; border-right:none; box-shadow:none;">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column is-4">
+                                        <div class="field">
+                                            <label class="label">Faaliyet Açıklaması / Not</label>
+                                            <div class="control">
+                                                <textarea class="textarea" rows="3"
+                                                    placeholder="Kısaca faaliyetleriniz..."></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Section 4: Membership Goal (Radio Big) -->
+                            <div class="mb-6">
+                                <h3 class="form-section-title">Üyelik Amacı</h3>
+                                <div class="control">
+                                    <label class="radio p-3 border-grey mb-2 w-100"
+                                        style="border:1px solid #eee; border-radius:6px; display:block;">
+                                        <input type="radio" name="goal">
+                                        <strong class="ml-2">Alıcı olmak istiyorum</strong>
+                                        <span class="is-block ml-5 pl-2 is-size-7 has-text-grey">(Körfez bölgesinde
+                                            proje yapıyorum, üretici arıyorum.)</span>
+                                    </label>
+                                    <label class="radio p-3 border-grey w-100"
+                                        style="border:1px solid #eee; border-radius:6px; display:block;">
+                                        <input type="radio" name="goal">
+                                        <strong class="ml-2">Satıcı olmak istiyorum</strong>
+                                        <span class="is-block ml-5 pl-2 is-size-7 has-text-grey">(Türkiye'de üreticiyim,
+                                            Körfez'e satış yapmak istiyorum.)</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="field is-grouped is-justify-content-flex-end">
+                                <div class="control">
+                                    <button class="button is-text">İptal</button>
+                                </div>
+                                <div class="control">
+                                    <button class="button is-danger is-medium px-6">BAŞVURUYU GÖNDER</button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Simple -->
+    <footer class="footer py-5 has-text-centered">
+        <p class="is-size-7 has-text-grey">&copy; 2025 Körfez.biz - Tüm hakları saklıdır.</p>
+    </footer>
+
+</body>
+
+</html>

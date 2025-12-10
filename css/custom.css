@@ -1,0 +1,1688 @@
+/* Font Family */
+:root {
+    --korfez-red: #ff0000;
+    --korfez-navy: #1f5b7e;
+    /* Text color */
+    --korfez-bg-blue: #00446c;
+    /* Background color for specific areas */
+    --korfez-light-bg: #F5F7FA;
+    --korfez-gold: #D4AF37;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #fcfcfc;
+    color: #333;
+}
+
+/* Force Red overrides for Bulma 'danger' colors to avoid pinkish tones */
+.has-text-danger {
+    color: var(--korfez-red) !important;
+}
+
+.has-background-danger {
+    background-color: var(--korfez-red) !important;
+}
+
+.button.is-danger {
+    background-color: var(--korfez-red) !important;
+    border-color: var(--korfez-red) !important;
+}
+
+.button.is-danger:hover {
+    background-color: #cc0000 !important;
+    border-color: #cc0000 !important;
+}
+
+.tag.is-danger {
+    background-color: var(--korfez-red) !important;
+}
+
+.input:focus,
+.textarea:focus,
+.select select:focus {
+    border-color: var(--korfez-red) !important;
+    box-shadow: 0 0 0 0.125em rgba(255, 0, 0, 0.25) !important;
+}
+
+.logo-dot,
+.logo-icon-part,
+.logo-arrow {
+    color: var(--korfez-red) !important;
+}
+
+.search-icon-btn {
+    background-color: var(--korfez-red) !important;
+}
+
+.pill-nav-item:hover {
+    color: var(--korfez-red) !important;
+    border-color: var(--korfez-red) !important;
+}
+
+/* Utilities */
+.w-100 {
+    width: 100% !important;
+}
+
+.h-100 {
+    height: 100% !important;
+}
+
+.uppercase-text {
+    text-transform: uppercase;
+}
+
+/* --- New Header Structure --- */
+
+/* Top Wave Container */
+.top-wave-container {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    background: var(--korfez-navy);
+    /* Base blue color */
+    position: relative;
+    overflow: hidden;
+}
+
+.top-wave-red {
+    background-color: var(--korfez-red);
+    width: 75%;
+    position: relative;
+    height: 100%;
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+    z-index: 2;
+}
+
+.wave-shape {
+    position: absolute;
+    right: -20px;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    background: white;
+    /* Curve effect spacer if needed, simplified with clip-path above */
+    display: none;
+}
+
+.top-wave-blue {
+    background-color: var(--korfez-bg-blue);
+    /* Updated to new dark blue */
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 2rem;
+    height: 100%;
+}
+
+.top-slogan-text {
+    color: white;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 1rem;
+}
+
+.currency-wrapper {
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Logo Area */
+.logo-main {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--korfez-navy);
+    letter-spacing: -1px;
+    line-height: 1;
+}
+
+.logo-main:after {
+    content: '.biz';
+    color: var(--korfez-red);
+}
+
+.logo-arrow {
+    font-size: 2rem;
+    color: var(--korfez-red);
+    font-weight: bold;
+    transform: scaleX(1.5);
+    /* Make standard icon look wider/custom */
+}
+
+/* Custom Search Bar */
+.custom-search-container {
+    border: 2px solid var(--korfez-navy);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    overflow: visible;
+    /* Butonun taşmasına izin ver */
+    height: 48px;
+    /* Yükseklik biraz artırıldı */
+    background: white;
+    position: relative;
+}
+
+.custom-search-input {
+    border: none;
+    flex-grow: 1;
+    padding: 0 1.5rem;
+    font-size: 1rem;
+    height: 100%;
+    outline: none;
+    border-radius: 50px 0 0 50px;
+    z-index: 2;
+    background: transparent;
+}
+
+.search-icon-btn {
+    background: var(--korfez-red) !important;
+    color: white;
+    border: 4px solid white !important;
+    /* Görseldeki beyaz halka */
+    width: 52px;
+    /* Container'dan biraz büyük */
+    height: 52px;
+    border-radius: 50%;
+    margin-right: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    position: relative;
+    z-index: 10;
+    /* En üstte */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-category-select {
+    background-color: var(--korfez-bg-blue);
+    color: white;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem 0 3rem;
+    /* Soldan boşluk artırıldı (buton için) */
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 0 50px 50px 0;
+    /* Sağ taraf oval */
+    margin-left: -26px;
+    /* Butonun altına girmesi için */
+    position: relative;
+    z-index: 1;
+}
+
+/* Top Links */
+.top-links {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.top-links a {
+    color: #333;
+    font-size: 0.9rem;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.lang-btn {
+    border: 1px solid #333 !important;
+    border-radius: 8px !important;
+    padding: 0 1rem !important;
+    height: 30px !important;
+    font-weight: 600 !important;
+    display: flex;
+    align-items: center;
+    color: #333 !important;
+    transition: all 0.2s ease;
+}
+
+.lang-btn:hover {
+    background-color: #f5f5f5 !important;
+}
+
+.slogan-micro {
+    color: #4a6d82;
+    /* Steel blue like reference */
+    font-style: italic;
+    font-size: 0.95rem;
+    font-weight: 500;
+    white-space: nowrap;
+    /* Force single line */
+}
+
+.header-auth-btn {
+    font-weight: 400 !important;
+    height: 42px !important;
+    /* Increased height */
+    font-size: 0.95rem !important;
+}
+
+.border-grey {
+    border: 1px solid #ccc;
+}
+
+/* Pill Navigation (Grouped Custom Style) */
+.pill-nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Semi-Border Group (C-Shape / Half Oval) */
+.nav-pill-group {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1.5rem;
+    position: relative;
+    border: none;
+    /* SQL injection of CSS? No, just clearing the old border */
+}
+
+/* Create the border using a pseudo-element to control the fade precisely */
+.nav-pill-group::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid var(--korfez-navy);
+    border-radius: 50px;
+    pointer-events: none;
+
+    /* Stronger Fade: Visible on left (black), fading out quickly towards center/right (transparent) */
+    -webkit-mask-image: linear-gradient(to right, black 20%, transparent 45%);
+    mask-image: linear-gradient(to right, black 20%, transparent 45%);
+}
+
+/* Full Border Group (No fade, strict border) */
+.nav-pill-group.full-border {
+    border: 1.5px solid var(--korfez-navy);
+    /* Slightly thicker */
+    padding-right: 5px;
+    /* Adjust for icon */
+    border-radius: 50px;
+}
+
+.nav-pill-group.full-border::before {
+    display: none;
+    /* No mask for full border */
+}
+
+.nav-item-link {
+    color: var(--korfez-navy);
+    font-weight: 400;
+    /* Regular weight as requested */
+    font-size: 0.95rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.nav-item-link:hover {
+    color: var(--korfez-red);
+}
+
+.nav-dot {
+    color: var(--korfez-navy);
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+/* Dark Icon Circle */
+.icon-circle-dark {
+    background-color: var(--korfez-bg-blue);
+    /* Updated to new dark blue */
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-circle-dark i {
+    font-size: 0.8rem;
+}
+
+/* Hero Banner */
+.hero-banner-wrapper {
+    display: flex;
+    height: auto;
+    /* Changed from fixed 250px to auto to fit image */
+    background: var(--korfez-navy);
+    /* Dark Blue BG */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Slider Controls (Visual) */
+.slider-navigation {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 5;
+}
+
+.slider-dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: default;
+    transition: all 0.3s ease;
+}
+
+.slider-dot.is-active {
+    background-color: #fff;
+    width: 30px;
+    border-radius: 10px;
+}
+
+.hero-left-content {
+    flex-grow: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-right-shape {
+    background: var(--korfez-red);
+    width: 45%;
+    position: relative;
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+    /* Chevron/Arrow shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 3rem;
+    padding-right: 2rem;
+}
+
+/* Navy Blue Overrides for Bulma 'info' colors to match new brand color */
+.has-text-info {
+    color: var(--korfez-navy) !important;
+}
+
+.has-background-info {
+    background-color: var(--korfez-navy) !important;
+}
+
+.has-background-info-dark {
+    background-color: var(--korfez-navy) !important;
+}
+
+.has-text-info-dark {
+    color: var(--korfez-navy) !important;
+}
+
+/* Filter Section */
+.filter-section {
+    background-color: var(--korfez-bg-blue) !important;
+    /* Outer dark blue */
+    padding: 1.5rem 0;
+}
+
+.filter-wrapper-box {
+    background-color: #486d87;
+    /* Inner lighter blue-gray */
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    /* Increased padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.filter-label {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.filter-inputs {
+    display: flex;
+    flex-grow: 1;
+    gap: 1rem;
+}
+
+.filter-inputs .control.is-expanded {
+    flex-grow: 1;
+}
+
+.filter-inputs .select select {
+    border: none;
+    border-radius: 6px;
+    height: 45px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #1f5b7e;
+    /* Navy text inside inputs */
+}
+
+/* Red Button with White Border */
+.filter-btn {
+    background-color: #ff0000 !important;
+    color: white !important;
+    border: 2px solid white !important;
+    border-radius: 6px !important;
+    height: 45px;
+    padding: 0 2rem !important;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+    background-color: #cc0000 !important;
+    transform: translateY(-1px);
+}
+
+/* Mobile responsive adjustments */
+@media screen and (max-width: 768px) {
+    .filter-wrapper-box {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
+    .filter-inputs {
+        flex-direction: column;
+    }
+}
+
+/* Steel Blue Text Utility (Darkened per request) */
+.text-steel-blue {
+    color: #276585 !important;
+}
+
+/* Featured Companies CSS */
+.companies-section .level-left h3 {
+    color: #276585 !important;
+    font-weight: 500 !important;
+}
+
+.companies-section .level-left span {
+    color: #276585 !important;
+}
+
+.companies-section .level-left a {
+    color: #276585 !important;
+    text-decoration: underline !important;
+    /* Added underline as per image */
+    font-weight: 400;
+}
+
+/* Navigation Arrow Buttons */
+.nav-arrow-btn {
+    background-color: #eef1f5 !important;
+    /* Light gray/blue tint from image */
+    color: #00446c !important;
+    /* Dark blue icon */
+    border: none !important;
+    box-shadow: none !important;
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    /* Bulma button override */
+    border-radius: 50% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+    transition: all 0.2s ease;
+}
+
+.nav-arrow-btn:hover {
+    background-color: #dbe2e8 !important;
+    color: var(--korfez-navy) !important;
+}
+
+.nav-arrow-btn i {
+    font-weight: 900;
+    /* Bold icon */
+    font-size: 1rem;
+}
+
+/* New Company Card Design */
+.company-box {
+    border: 1px solid #e5e5e5;
+    background: white;
+    padding: 0;
+    /* Remove default padding to control layout */
+    border-radius: 4px;
+    /* Slight radius or 0 depending on preference, sticking to clean look */
+    overflow: hidden;
+    height: 100%;
+    box-shadow: none;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.company-box:hover {
+    border-color: #ccc;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.company-logo-area {
+    background-color: #f4f4f4;
+    /* Light gray background for logo */
+    height: 160px;
+    /* Fixed height for consistency */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.company-logo-area img {
+    max-height: 100px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* Fallback for icon if no image */
+.company-logo-area i {
+    font-size: 3rem;
+    color: #555;
+}
+
+.company-name-area {
+    background-color: white;
+    padding: 1rem;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.company-name-text {
+    color: #333;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+/* Product Cards */
+.products-section {
+    background-color: var(--korfez-bg-blue);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.products-section .title {
+    color: white !important;
+}
+
+.products-section .level-left span {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.products-section .level-left a {
+    color: white !important;
+    opacity: 0.9;
+    text-decoration: underline;
+}
+
+.products-section .level-right .button {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.products-section .level-right .button:hover,
+.products-section .level-right .button.is-selected {
+    background-color: white;
+    color: var(--korfez-bg-blue);
+}
+
+/* Product Card Redesign */
+.product-card {
+    border: none !important;
+    border-radius: 4px;
+    /* Sharper corners as per image */
+    overflow: hidden;
+    background-color: white;
+    /* Image area bg */
+    height: 100%;
+}
+
+.product-card .card-image {
+    padding: 10px 10px 0 10px;
+    /* Padding around image */
+}
+
+.product-card .image img {
+    object-fit: cover;
+    height: 200px;
+}
+
+.product-card .card-content {
+    background-color: #f4f6f8;
+    /* Light blue-gray bg for text area */
+    padding: 1rem;
+    margin: 0 10px 10px 10px;
+    /* Inset effect */
+}
+
+.product-company-link {
+    color: #ff0000 !important;
+    text-decoration: underline !important;
+    font-weight: 500;
+    font-size: 0.95rem;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.product-name-link {
+    color: #4a6d82 !important;
+    /* Steel blue like title */
+    font-style: italic;
+    text-decoration: underline !important;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.product-official-name {
+    color: #555;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+/* Hide old elements just in case */
+.product-card .tag,
+.product-card .card-footer-buttons {
+    display: none !important;
+}
+
+/* Promo Cards Section Override */
+.promo-cards-section {
+    background-color: #f5f5f5 !important;
+}
+
+.promo-card {
+    height: 220px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.promo-card:hover {
+    transform: translateY(-5px);
+}
+
+.promo-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.promo-content {
+    position: relative;
+    z-index: 2;
+    padding: 1.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Card 1: Logistics */
+.card-logistics {
+    background-color: var(--korfez-bg-blue);
+}
+
+.card-logistics .button {
+    background-color: #ff0000 !important;
+    border: 2px solid white !important;
+    color: white !important;
+    font-weight: 600;
+    width: fit-content;
+    margin-top: auto;
+    /* Push to bottom if needed or just space */
+    border-radius: 20px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+/* Card 2: Video */
+.card-video {
+    background-color: #ff0000;
+    /* Red base */
+}
+
+.card-video .play-icon-wrapper {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #8b0000;
+    /* Darker red circle */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    border: 2px solid white;
+}
+
+.card-video .play-icon-wrapper i {
+    color: white;
+    font-size: 1rem;
+}
+
+/* Card 3: Register */
+.card-register {
+    background-color: #e0e0e0;
+}
+
+.card-register .register-btn-wrapper {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    z-index: 3;
+}
+
+.card-register .button {
+    background-color: var(--korfez-bg-blue) !important;
+    color: white !important;
+    border: 1px solid white;
+    width: 100%;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* B2B Split Section Design */
+.b2b-ecosystem {
+    background-color: var(--korfez-bg-blue) !important;
+    position: relative;
+    overflow: hidden;
+    padding: 4rem 0 !important;
+}
+
+.b2b-layout-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.b2b-side {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+}
+
+/* Central Divider Line */
+.b2b-center-divider {
+    position: absolute;
+    left: 50%;
+    top: -6rem;
+    /* Extend top further */
+    bottom: -6rem;
+    /* Extend bottom further */
+    width: 8px;
+    background-color: white;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+/* B2B Text Box */
+.b2b-badge-box {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Center on top edge */
+    background-color: var(--korfez-bg-blue);
+    border: 8px solid white;
+    padding: 5px 40px;
+    z-index: 3;
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    line-height: 1;
+    box-shadow: 0 0 0 10px var(--korfez-bg-blue);
+    /* Fake spacing around border if needed */
+}
+
+/* Handshake Circle */
+.b2b-handshake-circle {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    background-color: #bceeff;
+    /* Light blue circle bg */
+    border: 8px solid white;
+    border-radius: 50%;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.b2b-handshake-circle img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Illustrations */
+.b2b-illustration {
+    max-width: 350px;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+/* Text Content */
+.b2b-desc-text {
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    line-height: 1.5;
+    max-width: 400px;
+}
+
+/* Buttons */
+.btn-b2b-action {
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 50px;
+    /* Rounded pill shape */
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    margin-top: auto;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.btn-buyer {
+    background-color: var(--korfez-bg-blue) !important;
+    border: 2px solid white !important;
+    color: white !important;
+}
+
+.btn-buyer:hover {
+    background-color: white !important;
+    color: var(--korfez-bg-blue) !important;
+    transform: scale(1.05);
+}
+
+.btn-seller {
+    background-color: #ff0000 !important;
+    border: 2px solid white !important;
+    color: white !important;
+}
+
+.btn-seller:hover {
+    background-color: white !important;
+    color: #ff0000 !important;
+    transform: scale(1.05);
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 992px) {
+    .b2b-layout-wrapper {
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    .b2b-center-divider {
+        display: none;
+    }
+
+    .b2b-badge-box {
+        position: static;
+        transform: none;
+        margin: 0 auto 2rem auto;
+        display: inline-block;
+    }
+
+    .b2b-handshake-circle {
+        position: static;
+        transform: none;
+        margin: -2rem auto 2rem auto;
+    }
+
+    .b2b-side {
+        padding: 2rem 1rem;
+    }
+}
+
+/* Footer Redesign */
+.korfez-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-main {
+    background-color: #ff0000 !important;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.footer-col {
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
+    height: 100%;
+    min-height: 250px;
+    /* Ensure height matches boxes */
+}
+
+.footer-col.border-none {
+    border-right: none !important;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo .logo-text {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+.footer-logo .logo-icon {
+    font-size: 2.5rem;
+    color: white;
+    transform: rotate(45deg);
+    /* Chevron tweak if needed */
+}
+
+.footer-info {
+    color: white;
+    font-size: 0.9rem;
+}
+
+.footer-info .fl-label {
+    opacity: 0.9;
+}
+
+.footer-box-placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 220px;
+    background-color: rgba(255, 255, 255, 0.15);
+    /* Light red tint */
+    border-radius: 4px;
+    /* Optional slight radius */
+}
+
+/* Footer Bottom Bar */
+.footer-bottom {
+    background-color: var(--korfez-bg-blue);
+    height: 60px;
+    position: relative;
+}
+
+.footer-bar-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+.copyright-text {
+    color: #a0c4d9;
+    /* Lighter blue/grey text */
+    font-size: 0.8rem;
+    padding-left: 2rem;
+    z-index: 2;
+}
+
+.url-tab {
+    background-color: white;
+    height: 100%;
+    padding: 0 4rem 0 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--korfez-bg-blue);
+    font-weight: 600;
+    font-size: 1rem;
+    clip-path: polygon(30px 0, 100% 0, 100% 100%, 0% 100%);
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+/* Mobile responsive footer - 2025 Mobile-First Design */
+@media screen and (max-width: 768px) {
+    .footer-main {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .footer-main .columns {
+        display: block;
+    }
+
+    .footer-col {
+        border-right: none;
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        min-height: auto;
+        text-align: center;
+    }
+
+    /* Only show first column (logo & info) on mobile */
+    .footer-col:not(:first-child) {
+        display: none;
+    }
+
+    .footer-col:first-child {
+        border-right: none;
+        padding: 0 1rem;
+    }
+
+    .footer-logo {
+        justify-content: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .footer-logo img {
+        max-height: 60px !important;
+    }
+
+    .footer-info {
+        text-align: center;
+        font-size: 0.85rem;
+    }
+
+    .footer-info p {
+        margin-bottom: 0.5rem;
+    }
+
+    .footer-info br {
+        display: none;
+    }
+
+    /* Footer Bottom Bar Mobile */
+    .footer-bottom {
+        height: auto;
+        min-height: 80px;
+        padding: 1rem 0;
+    }
+
+    .footer-bar-wrapper {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0 1rem;
+    }
+
+    .url-tab {
+        position: static;
+        clip-path: none;
+        width: auto;
+        text-align: center;
+        padding: 0.5rem 1.5rem;
+        border-radius: 20px;
+        font-size: 0.9rem;
+    }
+
+    .copyright-text {
+        padding-left: 0;
+        text-align: center;
+        font-size: 0.7rem;
+        line-height: 1.4;
+    }
+}
+
+.b2b-ecosystem::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(15, 48, 87, 1) 0%, rgba(20, 60, 110, 1) 100%);
+    z-index: 0;
+}
+
+.b2b-ecosystem .container {
+    position: relative;
+    z-index: 1;
+}
+
+.b2b-center-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.connector-line {
+    height: 2px;
+    width: 200px;
+    background: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--korfez-red);
+    color: white;
+}
+
+.footer a {
+    color: #f1f1f1;
+    transition: opacity 0.2s;
+}
+
+.footer a:hover {
+    opacity: 0.8;
+    color: white;
+}
+
+/* Mobile Optimizations */
+.mobile-sticky-actions {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 60px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-sticky-actions .button {
+    height: 60px;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .main-nav {
+        display: none;
+    }
+
+    .hero-promo-section {
+        margin-bottom: 2rem !important;
+    }
+
+    .b2b-ecosystem {
+        padding-bottom: 90px;
+    }
+
+    /* Space for sticky bar */
+    .footer {
+        padding-bottom: 80px;
+    }
+
+    .search-container input {
+        border-radius: 4px !important;
+    }
+
+    .columns.is-mobile-multiline {
+        flex-wrap: wrap;
+    }
+}
+
+/* ================================================
+   2025 MOBILE-FIRST DESIGN STANDARDS
+   ================================================ */
+
+/* Screen Reader Only - Erişilebilirlik */
+.is-sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+/* Mobile Top Bar */
+.mobile-top-bar {
+    background: linear-gradient(90deg, var(--korfez-red) 0%, var(--korfez-red) 50%, var(--korfez-navy) 50%, var(--korfez-navy) 100%);
+    padding: 0.75rem 1rem;
+    text-align: center;
+}
+
+.currency-wrapper-mobile {
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Mobile Header Row */
+.mobile-header-row {
+    padding: 0 0.5rem;
+}
+
+.mobile-logo {
+    max-height: 50px;
+    width: auto;
+}
+
+/* Hamburger Menu Button - Touch-friendly (min 44x44px - 2025 standard) */
+.mobile-menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    padding: 10px;
+    background: transparent;
+    border: 2px solid var(--korfez-navy);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    gap: 5px;
+}
+
+.mobile-menu-toggle:hover,
+.mobile-menu-toggle:focus {
+    background-color: var(--korfez-navy);
+}
+
+.mobile-menu-toggle:hover .hamburger-line,
+.mobile-menu-toggle:focus .hamburger-line {
+    background-color: white;
+}
+
+.hamburger-line {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background-color: var(--korfez-navy);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Hamburger Animation when open */
+.mobile-menu-toggle.is-active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-menu-toggle.is-active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.is-active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Mobile Navigation Menu */
+.mobile-nav-menu {
+    background: white;
+    border-top: 1px solid #e5e5e5;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+.mobile-nav-menu.is-active {
+    max-height: 100vh;
+    padding: 1.5rem;
+    overflow-y: auto;
+}
+
+.mobile-nav-menu.is-hidden {
+    display: block;
+    max-height: 0;
+    padding: 0;
+}
+
+.mobile-nav-content {
+    padding: 0;
+}
+
+/* Mobile Search Box */
+.mobile-search-box {
+    display: flex;
+    border: 2px solid var(--korfez-navy);
+    border-radius: 50px;
+    overflow: hidden;
+    height: 48px;
+    /* Touch-friendly */
+}
+
+.mobile-search-input {
+    flex: 1;
+    border: none;
+    padding: 0 1rem;
+    font-size: 1rem;
+    outline: none;
+}
+
+.mobile-search-btn {
+    width: 48px;
+    background: var(--korfez-red);
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.mobile-search-btn:hover {
+    background: #cc0000;
+}
+
+/* Mobile Navigation List */
+.mobile-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-nav-list li {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.mobile-nav-link {
+    display: block;
+    padding: 1rem 0.5rem;
+    color: var(--korfez-navy);
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    /* Touch target minimum 44px achieved with padding */
+    min-height: 44px;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link:focus {
+    color: var(--korfez-red);
+    padding-left: 1rem;
+    background-color: #f9f9f9;
+}
+
+.mobile-nav-divider {
+    height: 1px;
+    background: #e0e0e0;
+    margin: 0.75rem 0;
+}
+
+/* Mobile Language Button */
+.lang-btn-mobile {
+    border: 1px solid var(--korfez-navy) !important;
+}
+
+/* ================================================
+   FLUID TYPOGRAPHY - clamp() for 2025
+   ================================================ */
+h1,
+.title.is-1 {
+    font-size: clamp(1.75rem, 5vw, 3rem);
+}
+
+h2,
+.title.is-2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+h3,
+.title.is-3,
+.title.is-4,
+.title.is-5 {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+}
+
+body {
+    font-size: clamp(0.95rem, 2vw, 1rem);
+    line-height: 1.6;
+}
+
+/* ================================================
+   TOUCH-FRIENDLY TARGETS (min 44x44px)
+   ================================================ */
+.button,
+.nav-arrow-btn,
+button:not(.mobile-menu-toggle),
+[role="button"]:not(.search-category-select),
+.mobile-nav-link,
+.mobile-search-btn {
+    min-height: 44px;
+}
+
+/* Exclude pill nav links from min-height to preserve oval shape */
+a.nav-item-link {
+    min-height: auto;
+    line-height: 1.2;
+}
+
+.button.is-small {
+    min-height: 36px;
+}
+
+/* Focus states for accessibility */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+[tabindex]:focus {
+    outline: 3px solid rgba(31, 91, 126, 0.5);
+    outline-offset: 2px;
+}
+
+/* ================================================
+   RESPONSIVE BREAKPOINTS - 2025 Standards
+   ================================================ */
+
+/* Extra Small Mobile (320px - 480px) */
+@media screen and (max-width: 480px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .mobile-logo {
+        max-height: 40px;
+    }
+
+    .promo-card {
+        height: 180px;
+    }
+
+    .b2b-badge-box {
+        font-size: 2rem;
+        padding: 3px 25px;
+    }
+
+    .b2b-handshake-circle {
+        width: 120px;
+        height: 120px;
+    }
+
+    .b2b-illustration {
+        max-width: 200px;
+    }
+
+    .company-logo-area {
+        height: 120px;
+    }
+
+    .footer-logo img {
+        max-height: 50px !important;
+    }
+
+    .mobile-sticky-actions .button {
+        font-size: 0.9rem;
+    }
+}
+
+/* Small Mobile Landscape (481px - 600px) */
+@media screen and (min-width: 481px) and (max-width: 600px) {
+    .columns.is-mobile>.column.is-6-mobile {
+        flex: none;
+        width: 50%;
+    }
+}
+
+/* Small Tablets (601px - 768px) - Bulma's mobile breakpoint edge */
+@media screen and (min-width: 601px) and (max-width: 768px) {
+    .filter-wrapper-box {
+        padding: 1.5rem 2rem;
+    }
+
+    .promo-card {
+        height: 200px;
+    }
+}
+
+/* Tablets (769px - 1023px) */
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+    .pill-nav-container {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .nav-pill-group {
+        padding: 0.4rem 1rem;
+    }
+
+    .nav-item-link {
+        font-size: 0.85rem;
+    }
+
+    .custom-search-container {
+        height: 40px;
+    }
+
+    .search-category-select {
+        padding: 0 1rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Desktop (1024px - 1215px) */
+@media screen and (min-width: 1024px) and (max-width: 1215px) {
+    .nav-item-link {
+        font-size: 0.9rem;
+    }
+
+    .b2b-layout-wrapper {
+        max-width: 1000px;
+    }
+}
+
+/* Widescreen (1216px - 1407px) */
+@media screen and (min-width: 1216px) and (max-width: 1407px) {
+    .container {
+        max-width: 1152px;
+    }
+}
+
+/* FullHD and above (1408px+) */
+@media screen and (min-width: 1408px) {
+    .container {
+        max-width: 1344px;
+    }
+
+    .hero-banner-wrapper img {
+        max-height: 450px;
+        object-fit: cover;
+    }
+}
+
+/* ================================================
+   REDUCED MOTION PREFERENCE
+   ================================================ */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ================================================
+   DARK MODE SUPPORT (2025 Trend)
+   ================================================ */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --korfez-light-bg: #1a1a2e;
+    }
+
+    /* Note: Full dark mode implementation would require 
+       additional color variable overrides */
+}
+
+/* ================================================
+   PRINT STYLES
+   ================================================ */
+@media print {
+
+    .mobile-sticky-actions,
+    .mobile-menu-toggle,
+    .mobile-nav-menu,
+    .top-wave-container,
+    .mobile-top-bar {
+        display: none !important;
+    }
+
+    body {
+        font-size: 12pt;
+        color: black;
+        background: white;
+    }
+}
