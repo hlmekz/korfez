@@ -1297,14 +1297,22 @@ body {
 /* Mobile Top Bar */
 .mobile-top-bar {
     background: linear-gradient(90deg, var(--korfez-red) 0%, var(--korfez-red) 50%, var(--korfez-navy) 50%, var(--korfez-navy) 100%);
-    padding: 0.75rem 1rem;
+    padding: 0.25rem 1rem;
+    /* Padding büyük ölçüde azaltıldı */
     text-align: center;
+    line-height: 1;
+    /* Dikey boşluk sıkılaştırıldı */
 }
 
 .currency-wrapper-mobile {
     color: white;
-    font-size: 0.75rem;
-    font-weight: 500;
+    font-size: 0.7rem;
+    /* Font biraz daha küçültüldü */
+    font-weight: 600;
+    /* Okunabilirlik için kalınlık artırıldı */
+    display: inline-block;
+    padding-top: 2px;
+    /* Dikey hizalama için ince ayar */
 }
 
 /* Mobile Header Row */
