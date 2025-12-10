@@ -1,3 +1,9 @@
+/**
+ * KA Framework - Mobile Logic
+ * Developed by: KA Development Team
+ * @version 2025.1.0
+ */
+
 // Körfez.biz - Mobile-First JavaScript
 document.addEventListener('DOMContentLoaded', () => {
 

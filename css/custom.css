@@ -1,9 +1,18 @@
-/* Font Family */
+/* 
+   -------------------------------------------------------------------------
+   Project: Körfez.biz
+   Developer: KA Development Team
+   Module: Main Stylesheet
+   Version: 2025.1.0
+   ------------------------------------------------------------------------- 
+*/
+
+/* KA Core Colors */
 :root {
-    --korfez-red: #ff0000;
-    --korfez-navy: #1f5b7e;
+    --korfez-red: #E30613;
+    --korfez-navy: #0F3057;
     /* Text color */
-    --korfez-bg-blue: #00446c;
+    --korfez-bg-blue: #0A2342;
     /* Background color for specific areas */
     --korfez-light-bg: #F5F7FA;
     --korfez-gold: #D4AF37;
@@ -1278,7 +1287,8 @@ body {
 }
 
 /* ================================================
-   2025 MOBILE-FIRST DESIGN STANDARDS
+   KA MOBILE-FIRST DESIGN STANDARDS (2025)
+   Implemented by: KA Team
    ================================================ */
 
 /* Screen Reader Only - Erişilebilirlik */
@@ -1529,7 +1539,8 @@ select:focus,
 }
 
 /* ================================================
-   RESPONSIVE BREAKPOINTS - 2025 Standards
+   KA RESPONSIVE BREAKPOINTS
+   Optimized for 2025 Device Compatibility
    ================================================ */
 
 /* Extra Small Mobile (320px - 480px) */
