@@ -1,0 +1,365 @@
+<!-- 
+    Project: Körfez.biz - Trade Bridge
+    Page: Who We Are (Biz Kimiz)
+    Developed by: KA Development Team
+    Version: 2.1.0 (Mobile First)
+-->
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#E30613">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Körfez.biz | Biz Kimiz?</title>
+    <!-- Bulma CSS framework -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+
+    <!-- Mobile Top Bar -->
+    <div class="mobile-top-bar is-hidden-tablet">
+        <div class="currency-wrapper-mobile">
+            <span>1 USD = 40 TL</span>
+            <span class="mx-3">1 EUR = 45 TL</span>
+        </div>
+    </div>
+
+    <!-- Main Header Area -->
+    <header class="main-header pt-4 pb-2">
+        <div class="container">
+            <!-- Mobile Header Row -->
+            <div
+                class="is-hidden-tablet mobile-header-row is-flex is-justify-content-space-between is-align-items-center mb-3">
+                <a href="index.html" class="mobile-logo-link">
+                    <img src="images/logo.png" alt="Körfez.biz Logo" class="mobile-logo"
+                        onerror="this.onerror=null;this.src='https://placehold.co/150x60?text=Korfez.biz';">
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Menüyü aç" aria-expanded="false"
+                    aria-controls="mobile-nav-menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+
+            <!-- Top Row: Logo, Search, Auth (Desktop) -->
+            <div class="columns is-vcentered is-hidden-mobile">
+                <!-- Logo -->
+                <div class="column is-3">
+                    <a href="index.html" class="is-flex is-align-items-center">
+                        <img src="images/logo.png" alt="Körfez.biz Logo" style="max-height: 100px;"
+                            onerror="this.onerror=null;this.src='https://placehold.co/200x80?text=Korfez.biz';">
+                    </a>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="column is-5">
+                    <div class="custom-search-container">
+                        <label for="header-search" class="is-sr-only">Ürün ve şirket ara</label>
+                        <input type="text" id="header-search" class="custom-search-input"
+                            placeholder="Ürün ve şirket ara..." aria-label="Ürün ve şirket ara">
+                        <button class="search-icon-btn" aria-label="Ara"><i class="fas fa-search"
+                                aria-hidden="true"></i></button>
+                        <div class="search-category-select" role="button" tabindex="0" aria-haspopup="listbox"
+                            aria-label="Kategori seçin">
+                            <span>TÜM ÜRÜNLER</span>
+                            <i class="fas fa-chevron-down ml-2" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Login / Action -->
+                <div class="column is-4 has-text-right is-flex is-flex-direction-column is-align-items-end">
+                    <div class="top-links mb-3">
+                        <a href="biz-kimiz.html" class="has-text-weight-bold">Biz Kimiz?</a>
+                        <span>•</span>
+                        <a href="#">SSS</a>
+                        <span>•</span>
+                        <a href="#">İletişim</a>
+                        <div class="lang-dropdown ml-3">
+                            <button class="button is-small is-white lang-btn">TR <i
+                                    class="fas fa-caret-down ml-2"></i></button>
+                        </div>
+                    </div>
+                    <div class="is-flex is-align-items-center">
+                        <span class="slogan-micro mr-3 is-hidden-touch">Güçlü ticari bağlar kurun.</span>
+                        <a href="register.html" class="button is-danger is-rounded px-5 header-auth-btn">ÜYE OL • GİRİŞ
+                            YAP</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Row: Pill Navigation (Grouped Style) - Desktop Only -->
+            <nav class="pill-nav-container mt-3 is-hidden-touch" aria-label="Ana navigasyon">
+
+                <!-- Group 1: Sectors & Suppliers (Fade Effect Border) -->
+                <div class="nav-pill-group">
+                    <a href="#" class="nav-item-link">SEKTÖRLER</a>
+                    <span class="nav-dot" aria-hidden="true">•</span>
+                    <a href="#" class="nav-item-link">TEDARİKÇİLER</a>
+                </div>
+
+                <!-- Group 2: Projects & Ads (Fade Effect Border) -->
+                <div class="nav-pill-group ml-4">
+                    <a href="#" class="nav-item-link">PROJE YATIRIMCILARI</a>
+                    <span class="nav-dot" aria-hidden="true">•</span>
+                    <a href="#" class="nav-item-link">İLANLAR / TEKLİF TALEPLERİ</a>
+                </div>
+
+                <!-- Group 3: Product Categories (Full Border & Dark Icon) -->
+                <div class="nav-pill-group full-border ml-4 pr-1">
+                    <a href="#" class="nav-item-link">ÜRÜN KATEGORİLERİ</a>
+                    <span class="icon-circle-dark ml-2">
+                        <i class="fas fa-chevron-down has-text-white" aria-hidden="true"></i>
+                    </span>
+                </div>
+
+            </nav>
+
+            <!-- Mobile Navigation Menu -->
+            <nav id="mobile-nav-menu" class="mobile-nav-menu is-hidden" aria-label="Mobil navigasyon">
+                <div class="mobile-nav-content">
+                    <!-- Mobile Search -->
+                    <div class="mobile-search-box mb-4">
+                        <label for="mobile-search" class="is-sr-only">Ara</label>
+                        <input type="text" id="mobile-search" class="mobile-search-input"
+                            placeholder="Ürün ve şirket ara..." aria-label="Ara">
+                        <button class="mobile-search-btn" aria-label="Ara"><i class="fas fa-search"
+                                aria-hidden="true"></i></button>
+                    </div>
+
+                    <ul class="mobile-nav-list">
+                        <li><a href="#" class="mobile-nav-link">Sektörler</a></li>
+                        <li><a href="#" class="mobile-nav-link">Tedarikçiler</a></li>
+                        <li><a href="#" class="mobile-nav-link">Proje Yatırımcıları</a></li>
+                        <li><a href="#" class="mobile-nav-link">İlanlar / Teklif Talepleri</a></li>
+                        <li><a href="#" class="mobile-nav-link">Ürün Kategorileri</a></li>
+                        <li class="mobile-nav-divider"></li>
+                        <li><a href="biz-kimiz.html" class="mobile-nav-link has-text-weight-bold"
+                                style="color: var(--korfez-red);">Biz Kimiz?</a></li>
+                        <li><a href="#" class="mobile-nav-link">SSS</a></li>
+                        <li><a href="#" class="mobile-nav-link">İletişim</a></li>
+                    </ul>
+
+                    <div class="mobile-nav-actions mt-4">
+                        <a href="register.html" class="button is-danger is-fullwidth is-medium">ÜYE OL • GİRİŞ YAP</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Title Hero -->
+    <section class="section has-background-light py-5">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="breadcrumbs">
+                <ul>
+                    <li><a href="index.html">Anasayfa</a></li>
+                    <li class="is-active"><a href="#" aria-current="page">Biz Kimiz?</a></li>
+                </ul>
+            </nav>
+            <h1 class="title is-2 has-text-centered mobile-title" style="color: var(--korfez-navy);">Biz Kimiz?</h1>
+            <div class="divider mx-auto"
+                style="width: 60px; height: 3px; background-color: var(--korfez-red); margin-bottom: 2rem;"></div>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="section">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-8-desktop is-10-tablet">
+                    <div class="content is-medium">
+
+                        <div class="box p-5 mb-6" style="border-left: 5px solid var(--korfez-red);">
+                            <h2 class="title is-4" style="color: var(--korfez-navy);">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg"
+                                    alt="Türkiye Bayrağı"
+                                    style="height: 24px; width: auto; vertical-align: middle; margin-right: 10px; border: 1px solid #eee; border-radius: 4px;">
+                                Körfez.biz Nedir?
+                            </h2>
+                            <p class="is-size-5 has-text-weight-medium">Türkiye’nin Üretim Gücünü Dünyaya Taşıyan
+                                Dijital Köprü!</p>
+                            <p>Körfez.biz, Türkiye’nin dört bir yanındaki güçlü üreticileri, Körfez ülkelerinde (Katar,
+                                Suudi Arabistan, Birleşik Arap Emirlikleri, Kuveyt, Umman, Bahreyn, Irak ve daha
+                                fazlası) faaliyet gösteren alıcılarla doğrudan buluşturan bir dijital tedarik
+                                platformudur.</p>
+
+                            <p class="mt-4"><strong>Bu platform sayesinde artık:</strong></p>
+                            <ul style="list-style: none; margin-left: 0;">
+                                <li class="mb-2"><i class="fas fa-check-circle has-text-success mr-2"></i> Türk
+                                    üreticiler ürünlerini dünyanın en hızlı büyüyen inşaat ve yatırım pazarlarında
+                                    sergileyebiliyor,</li>
+                                <li><i class="fas fa-check-circle has-text-success mr-2"></i> Körfezli yatırımcılar,
+                                    ihtiyaç duydukları malzemeleri doğrudan üreticisinden, aracısız ve hızlı şekilde
+                                    tedarik edebiliyor.</li>
+                            </ul>
+                        </div>
+
+                        <hr class="my-6">
+
+                        <h2 class="title is-4" style="color: var(--korfez-navy);">💼 Neden Körfez.biz?</h2>
+                        <div class="columns is-multiline">
+                            <div class="column is-12">
+                                <p>Çünkü biz, <strong>Türkiye’nin üretim gücüne güveniyoruz.</strong></p>
+                                <p>Çünkü biz, <strong>Körfez ülkelerinin yatırım ve inşaat potansiyelini
+                                        görüyoruz.</strong></p>
+                                <p>Ve bu iki gücü birleştirerek, hem üreticimize yeni pazarlar açıyor hem de bölge
+                                    ekonomisine katkı sağlıyoruz.</p>
+                            </div>
+                        </div>
+
+                        <hr class="my-6">
+
+                        <h2 class="title is-4" style="color: var(--korfez-navy);"><i
+                                class="fas fa-hard-hat mr-2"></i>Kimler Kullanabilir?</h2>
+
+                        <div class="card mb-4" style="border-radius: 8px; border: 1px solid #eee; box-shadow: none;">
+                            <div class="card-content">
+                                <h3 class="title is-5 mb-2">🏭 Üretici misiniz?</h3>
+                                <p>Fabrikanızda ürettiğiniz ürünleri Körfez pazarına açmak istiyorsanız, körfez.biz’e
+                                    katılarak dijital vitrininizi oluşturun.</p>
+                            </div>
+                        </div>
+
+                        <div class="card mb-4" style="border-radius: 8px; border: 1px solid #eee; box-shadow: none;">
+                            <div class="card-content">
+                                <h3 class="title is-5 mb-2">🏗️ Yatırımcı ya da Müteahhit misiniz?</h3>
+                                <p>İhtiyacınız olan ürünü seçin, en uygun fiyatı ve en güvenilir firmayı bir tıkla
+                                    bulun, doğrudan teklif alın.</p>
+                            </div>
+                        </div>
+
+                        <div class="card mb-4" style="border-radius: 8px; border: 1px solid #eee; box-shadow: none;">
+                            <div class="card-content">
+                                <h3 class="title is-5 mb-2">🚢 İhracata başlamak mı istiyorsunuz?</h3>
+                                <p>Körfez.biz size özel lojistik, teklif, tanıtım ve gümrük desteğiyle yanınızda!</p>
+                            </div>
+                        </div>
+
+                        <hr class="my-6">
+
+                        <div class="has-text-centered has-background-light p-5" style="border-radius: 12px;">
+                            <h2 class="title is-4 mb-4" style="color: var(--korfez-navy);">🌐 Dijitalde Üreten Türkiye
+                            </h2>
+                            <p class="mb-4">Körfez.biz sadece bir ticaret platformu değil, <strong>yeni bir ihracat
+                                    modelidir.</strong></p>
+                            <p>Türkiye’den Körfez’e lojistik destekli, güvenli, hızlı ve doğrudan ticaretin dijital
+                                köprüsüdür.</p>
+                        </div>
+
+                        <hr class="my-6">
+
+                        <h2 class="title is-4" style="color: var(--korfez-navy);">🛠️ İnşaata, Yatırıma, Üretime Güç
+                            Katıyoruz!</h2>
+                        <p>Seramikten demir çeliğe, elektrikten mobilyaya kadar yüzlerce ürün…<br>
+                            Yüzlerce Türk firması ve dev Körfez projeleri artık aynı platformda.</p>
+
+                        <div class="notification is-danger is-light mt-5">
+                            <p class="has-text-weight-bold is-size-5 has-text-centered mb-3"
+                                style="color: var(--korfez-red);">Körfez.biz’e katılın, dünyanın en hızlı büyüyen
+                                pazarlarında yerinizi alın!</p>
+                            <p class="has-text-centered">
+                                <span class="icon-text mr-4">
+                                    <span class="icon"><i class="fas fa-box"></i></span>
+                                    <span>Türkiye’den üret, dünyaya gönder.</span>
+                                </span>
+                                <span class="icon-text">
+                                    <span class="icon"><i class="fas fa-handshake"></i></span>
+                                    <span>Körfez.biz: Ticaretin Yeni Adresi!</span>
+                                </span>
+                            </p>
+                        </div>
+
+                        <div class="has-text-centered mt-6">
+                            <a href="register.html" class="button is-danger is-large is-rounded">HEMEN ÜYE OL</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="korfez-footer">
+        <div class="footer-main section">
+            <div class="container">
+                <div class="columns is-variable is-4">
+                    <!-- Col 1: Logo & Info -->
+                    <div class="column is-3 footer-col">
+                        <div class="footer-logo mb-5">
+                            <img src="images/logo-footer.png" alt="Körfez.biz" style="max-height: 80px;">
+                        </div>
+                        <div class="footer-info">
+                            <p class="mb-2"><span class="fl-label">Adres :</span></p>
+                            <br>
+                            <p class="mb-2"><span class="fl-label">Tel :</span></p>
+                            <p class="mb-2"><span class="fl-label">Mail :</span></p>
+                        </div>
+                    </div>
+                    <!-- Col 2: Placeholder -->
+                    <div class="column is-3 footer-col">
+                        <div class="footer-box-placeholder"></div>
+                    </div>
+                    <!-- Col 3: Placeholder -->
+                    <div class="column is-3 footer-col">
+                        <div class="footer-box-placeholder"></div>
+                    </div>
+                    <!-- Col 4: Placeholder -->
+                    <div class="column is-3 footer-col border-none">
+                        <div class="footer-box-placeholder"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container is-fluid p-0 h-100">
+                <div class="footer-bar-wrapper">
+                    <div class="copyright-text">
+                        &copy; 2025 Körfez Canlı Ltd. Şti. Tüm hakları saklıdır. | All rights reserved. | <span
+                            style="font-family: 'Arial', sans-serif;">حقوق الطبع والنشر</span>
+                    </div>
+                    <div class="url-tab">
+                        <span>www.korfez.biz</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky Bottom Actions -->
+    <div class="mobile-sticky-actions is-hidden-desktop">
+        <div class="columns is-gapless is-mobile">
+            <div class="column">
+                <a href="register.html" class="button is-link is-fullwidth is-radiusless h-100">
+                    <span class="icon"><i class="fas fa-user-tie"></i></span>
+                    <span>ALICI OL</span>
+                </a>
+            </div>
+            <div class="column">
+                <a href="register.html" class="button is-danger is-fullwidth is-radiusless h-100">
+                    <span class="icon"><i class="fas fa-store"></i></span>
+                    <span>SATICI OL</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+    <!-- KA Development Team - End of Document -->
+</body>
+
+</html>
