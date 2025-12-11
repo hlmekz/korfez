@@ -1,9 +1,20 @@
+<!-- 
+    Project: Körfez.biz - Trade Bridge
+    Page: Registration Form
+    Developed by: KA Development Team
+    Version: 2.1.0 (Mobile First)
+-->
 <!DOCTYPE html>
 <html lang="tr">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 2025 Mobile-First Viewport Configuration -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#E30613">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Körfez.biz | Üyelik Başvurusu</title>
     <!-- Bulma CSS framework -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
@@ -13,6 +24,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/custom.css">
+    <!-- Register Page Mobile Optimizations -->
+    <link rel="stylesheet" href="css/register-mobile.css">
     <style>
         .form-section-title {
             border-bottom: 2px solid #f1f1f1;
@@ -27,31 +40,46 @@
             border-radius: 8px;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
             padding: 2rem;
-            margin-top: -80px;
-            /* Overlap hero */
+            margin-top: 0;
             position: relative;
             z-index: 10;
         }
 
         .hero-register {
-            background-color: var(--korfez-red);
-            height: 300px;
-            display: flex;
-            align-items: flex-start;
-            padding-top: 60px;
             position: relative;
+            padding-top: 60px;
+            padding-bottom: 1rem;
+            z-index: 1;
         }
 
-        .hero-register::after {
+        .hero-register::before {
             content: '';
             position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 300px;
-            height: 100%;
-            background: url('https://via.placeholder.com/300x300?text=Wave') no-repeat bottom right;
-            /* Optional graphic */
-            opacity: 0.1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 40%;
+            /* Background covers top 40% */
+            background-color: var(--korfez-red);
+            border-bottom-left-radius: 50% 40px;
+            border-bottom-right-radius: 50% 40px;
+            z-index: -1;
+        }
+
+        /* Mobile Optimizations */
+        @media screen and (max-width: 768px) {
+            .hero-register {
+                padding-top: 0 !important;
+                padding-bottom: 0 !important;
+                min-height: 180px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .hero-register::before {
+                height: 28% !important;
+            }
         }
 
         .step-indicator {
@@ -59,6 +87,9 @@
             justify-content: space-between;
             margin-bottom: 2rem;
             position: relative;
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .step-indicator::before {
@@ -107,30 +138,46 @@
 
 <body class="has-background-light">
 
-    <!-- Simple Header -->
+    <!-- Mobile Top Bar -->
+    <div class="mobile-top-bar is-hidden-tablet">
+        <div class="currency-wrapper-mobile">
+            <span>1 USD = 40 TL</span>
+            <span class="mx-3">1 EUR = 45 TL</span>
+        </div>
+    </div>
+
+    <!-- Header with Mobile Support -->
     <header class="main-header py-3">
         <div class="container">
-            <a href="index.html" class="logo-wrapper is-flex is-align-items-center">
-                <span class="logo-text is-size-3 has-text-weight-bold" style="color:var(--korfez-navy)">korfez<span
-                        style="color:var(--korfez-red)">.</span>biz</span>
-                <i class="fas fa-chevron-left ml-2" style="color:var(--korfez-red); font-size:1.5rem"></i>
-            </a>
+            <div class="is-flex is-justify-content-space-between is-align-items-center">
+                <a href="index.html" class="logo-wrapper is-flex is-align-items-center">
+                    <img src="images/logo.png" alt="Körfez.biz Logo" class="is-hidden-mobile"
+                        style="max-height: 100px;">
+                    <img src="images/logo.png" alt="Körfez.biz Logo" class="mobile-logo is-hidden-tablet"
+                        style="max-height: 70px;">
+                </a>
+                <!-- Mobile Menu Toggle -->
+                <a href="index.html" class="button is-outlined is-hidden-tablet"
+                    style="border-color: var(--korfez-navy); color: var(--korfez-navy);">
+                    <span class="icon"><i class="fas fa-home"></i></span>
+                    <span>Ana Sayfa</span>
+                </a>
+            </div>
         </div>
     </header>
 
     <!-- Hero Background -->
     <div class="hero-register">
         <div class="container">
-            <div class="columns">
-                <div class="column is-6 has-text-white">
-                    <h1 class="title is-2 has-text-white">Körfez.biz'e Katılın</h1>
-                    <p class="subtitle is-5 has-text-white-ter">Türkiye ve Körfez arasında güçlü ticaret bağları kurmak
-                        için ilk adımı atın.</p>
-                </div>
-                <div class="column is-6 is-hidden-mobile">
-                    <!-- Image Placeholder for Smiling Professional -->
-                    <img src="https://via.placeholder.com/400x300?text=Professional"
-                        style="float:right; border-radius:10px; opacity:0.9">
+            <div class="columns is-centered">
+                <div class="column is-8 has-text-centered">
+                    <h1 class="title is-2 has-text-white mb-4">Körfez.biz'e Katılın</h1>
+                    <p class="subtitle is-5 has-text-white-ter mb-6">Türkiye ve Körfez arasında güçlü ticaret bağları
+                        kurmak için ilk adımı atın.</p>
+
+                    <!-- Basvuru Banner Image -->
+                    <img src="images/basvuru-banner.jpg"
+                        style="display:block; margin: 0 auto; width: 100%; max-width: 450px; border-radius:10px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
                 </div>
             </div>
         </div>
@@ -147,19 +194,11 @@
                         <div class="step-indicator">
                             <div class="step-item active">
                                 <div class="step-circle">1</div>
-                                <span class="is-size-7">Firma Bilgileri</span>
+                                <span class="is-size-7">Bilgiler</span>
                             </div>
                             <div class="step-item">
                                 <div class="step-circle">2</div>
-                                <span class="is-size-7">İletişim</span>
-                            </div>
-                            <div class="step-item">
-                                <div class="step-circle">3</div>
-                                <span class="is-size-7">Faaliyet</span>
-                            </div>
-                            <div class="step-item">
-                                <div class="step-circle">4</div>
-                                <span class="is-size-7">Amaç</span>
+                                <span class="is-size-7">Onay</span>
                             </div>
                         </div>
 
@@ -176,17 +215,21 @@
                                 <div class="columns is-multiline">
                                     <div class="column is-6">
                                         <div class="field">
-                                            <label class="label">Şirket Adı *</label>
+                                            <label class="label" for="company-name">Şirket Adı *</label>
                                             <div class="control">
-                                                <input class="input" type="text" placeholder="Şirketinizin tam ünvanı">
+                                                <input class="input" type="text" id="company-name" name="company-name"
+                                                    placeholder="Şirketinizin tam ünvanı" aria-label="Şirket Adı"
+                                                    aria-required="true" required>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="column is-6">
                                         <div class="field">
-                                            <label class="label">Temsilci Adı-Soyadı *</label>
+                                            <label class="label" for="representative-name">Temsilci Adı-Soyadı *</label>
                                             <div class="control">
-                                                <input class="input" type="text" placeholder="Yetkili kişi">
+                                                <input class="input" type="text" id="representative-name"
+                                                    name="representative-name" placeholder="Yetkili kişi"
+                                                    aria-label="Temsilci Adı Soyadı" aria-required="true" required>
                                             </div>
                                         </div>
                                     </div>
@@ -215,10 +258,10 @@
                                 <div class="columns is-multiline">
                                     <div class="column is-6">
                                         <div class="field">
-                                            <label class="label">Ülke</label>
+                                            <label class="label" for="country-select">Ülke</label>
                                             <div class="control">
                                                 <div class="select is-fullwidth">
-                                                    <select>
+                                                    <select id="country-select" name="country" aria-label="Ülke seçin">
                                                         <option>Türkiye</option>
                                                         <option>Katar</option>
                                                         <option>BAE</option>
@@ -245,9 +288,12 @@
                                     </div>
                                     <div class="column is-6">
                                         <div class="field">
-                                            <label class="label">Telefon (Uluslararası Format) *</label>
+                                            <label class="label" for="phone-input">Telefon (Uluslararası Format)
+                                                *</label>
                                             <div class="control has-icons-left">
-                                                <input class="input" type="tel" placeholder="+90 555 123 45 67">
+                                                <input class="input" type="tel" id="phone-input" name="phone"
+                                                    placeholder="+90 555 123 45 67" aria-label="Telefon numarası"
+                                                    aria-required="true" required>
                                                 <span class="icon is-small is-left"><i class="fas fa-phone"></i></span>
                                             </div>
                                         </div>
@@ -316,29 +362,38 @@
                             <div class="mb-6">
                                 <h3 class="form-section-title">Üyelik Amacı</h3>
                                 <div class="control">
-                                    <label class="radio p-3 border-grey mb-2 w-100"
-                                        style="border:1px solid #eee; border-radius:6px; display:block;">
-                                        <input type="radio" name="goal">
-                                        <strong class="ml-2">Alıcı olmak istiyorum</strong>
-                                        <span class="is-block ml-5 pl-2 is-size-7 has-text-grey">(Körfez bölgesinde
-                                            proje yapıyorum, üretici arıyorum.)</span>
+                                    <!-- Option 1 -->
+                                    <label class="p-3 mb-2"
+                                        style="border:1px solid #eee; border-radius:6px; display:flex; align-items:flex-start; width:100%; cursor:pointer;">
+                                        <input type="radio" name="goal" style="margin-top:5px;">
+                                        <div style="margin-left: 10px;">
+                                            <strong class="is-block">Alıcı olmak istiyorum</strong>
+                                            <span class="is-size-7 has-text-grey">(Körfez bölgesinde proje yapıyorum,
+                                                üretici arıyorum.)</span>
+                                        </div>
                                     </label>
-                                    <label class="radio p-3 border-grey w-100"
-                                        style="border:1px solid #eee; border-radius:6px; display:block;">
-                                        <input type="radio" name="goal">
-                                        <strong class="ml-2">Satıcı olmak istiyorum</strong>
-                                        <span class="is-block ml-5 pl-2 is-size-7 has-text-grey">(Türkiye'de üreticiyim,
-                                            Körfez'e satış yapmak istiyorum.)</span>
+                                    <!-- Option 2 -->
+                                    <label class="p-3"
+                                        style="border:1px solid #eee; border-radius:6px; display:flex; align-items:flex-start; width:100%; cursor:pointer;">
+                                        <input type="radio" name="goal" style="margin-top:5px;">
+                                        <div style="margin-left: 10px;">
+                                            <strong class="is-block">Satıcı olmak istiyorum</strong>
+                                            <span class="is-size-7 has-text-grey">(Türkiye'de üreticiyim, Körfez'e satış
+                                                yapmak istiyorum.)</span>
+                                        </div>
                                     </label>
                                 </div>
                             </div>
 
-                            <div class="field is-grouped is-justify-content-flex-end">
+                            <div class="field is-grouped is-grouped-centered-mobile is-justify-content-flex-end">
                                 <div class="control">
-                                    <button class="button is-text">İptal</button>
+                                    <button type="button" class="button is-text" aria-label="İptal">İptal</button>
                                 </div>
                                 <div class="control">
-                                    <button class="button is-danger is-medium px-6">BAŞVURUYU GÖNDER</button>
+                                    <button type="submit" class="button is-danger is-medium px-6"
+                                        aria-label="Başvuruyu gönder">
+                                        BAŞVURUYU GÖNDER
+                                    </button>
                                 </div>
                             </div>
 
@@ -349,11 +404,25 @@
         </div>
     </section>
 
-    <!-- Footer Simple -->
-    <footer class="footer py-5 has-text-centered">
-        <p class="is-size-7 has-text-grey">&copy; 2025 Körfez.biz - Tüm hakları saklıdır.</p>
+    <!-- Footer -->
+    <footer class="korfez-footer">
+        <div class="footer-main section py-5">
+            <div class="container">
+                <div class="columns is-vcentered">
+                    <div class="column is-3">
+                        <div class="footer-logo">
+                            <img src="images/logo-footer.png" alt="Körfez.biz" style="max-height: 80px;">
+                        </div>
+                    </div>
+                    <div class="column is-9 has-text-right-desktop has-text-centered-mobile">
+                        <p class="has-text-white is-size-7">&copy; 2025 Körfez Canlı Ltd. Şti. Tüm hakları saklıdır.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 
+    <!-- KA Development Team - End of Document -->
 </body>
 
 </html>
