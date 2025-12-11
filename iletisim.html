@@ -1,0 +1,300 @@
+<!-- 
+    Project: Körfez.biz - Trade Bridge
+    Page: Contact (İletişim)
+    Developed by: KA Development Team
+    Version: 2.1.0 (Mobile First)
+-->
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#E30613">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Körfez.biz | İletişim</title>
+    <!-- Bulma CSS framework -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+
+    <!-- Mobile Top Bar -->
+    <div class="mobile-top-bar is-hidden-tablet">
+        <div class="currency-wrapper-mobile">
+            <span>1 USD = 40 TL</span>
+            <span class="mx-3">1 EUR = 45 TL</span>
+        </div>
+    </div>
+
+    <!-- Main Header Area (Same as others) -->
+    <header class="main-header pt-4 pb-2">
+        <div class="container">
+            <!-- Mobile Header Row -->
+            <div
+                class="is-hidden-tablet mobile-header-row is-flex is-justify-content-space-between is-align-items-center mb-3">
+                <a href="index.html" class="mobile-logo-link">
+                    <img src="images/logo.png" alt="Körfez.biz Logo" class="mobile-logo">
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Menüyü aç">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+
+            <!-- Top Row: Logo, Search, Auth (Desktop) -->
+            <div class="columns is-vcentered is-hidden-mobile">
+                <div class="column is-3">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="Körfez.biz Logo" style="max-height: 100px;">
+                    </a>
+                </div>
+                <div class="column is-5">
+                    <div class="custom-search-container">
+                        <input type="text" class="custom-search-input" placeholder="Ürün ve şirket ara...">
+                        <button class="search-icon-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+                <div class="column is-4 has-text-right is-flex is-flex-direction-column is-align-items-end">
+                    <div class="top-links mb-3">
+                        <a href="biz-kimiz.html">Biz Kimiz?</a>
+                        <span>•</span>
+                        <a href="sektorler.html">Ne Sunuyoruz?</a>
+                        <span>•</span>
+                        <a href="iletisim.html" class="has-text-weight-bold">İletişim</a>
+                    </div>
+                    <div class="is-flex is-align-items-center">
+                        <a href="register.html" class="button is-danger is-rounded px-5 header-auth-btn">ÜYE OL • GİRİŞ
+                            YAP</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <nav id="mobile-nav-menu" class="mobile-nav-menu is-hidden" aria-label="Mobil navigasyon">
+                <div class="mobile-nav-content">
+                    <ul class="mobile-nav-list">
+                        <li><a href="index.html" class="mobile-nav-link">Ana Sayfa</a></li>
+                        <li><a href="biz-kimiz.html" class="mobile-nav-link">Biz Kimiz?</a></li>
+                        <li><a href="sektorler.html" class="mobile-nav-link">Sektörler</a></li>
+                        <li><a href="iletisim.html" class="mobile-nav-link has-text-weight-bold"
+                                style="color: var(--korfez-red);">İletişim</a></li>
+                    </ul>
+                    <div class="mobile-nav-actions mt-4">
+                        <a href="register.html" class="button is-danger is-fullwidth is-medium">ÜYE OL • GİRİŞ YAP</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Title Hero -->
+    <section class="section has-background-light py-5">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="breadcrumbs">
+                <ul>
+                    <li><a href="index.html">Anasayfa</a></li>
+                    <li class="is-active"><a href="#" aria-current="page">İletişim</a></li>
+                </ul>
+            </nav>
+            <h1 class="title is-2 has-text-centered mobile-title" style="color: var(--korfez-navy);">Bize Ulaşın</h1>
+            <div class="divider mx-auto"
+                style="width: 60px; height: 3px; background-color: var(--korfez-red); margin-bottom: 2rem;"></div>
+            <p class="subtitle has-text-centered is-6 mb-5">Sorularınız, iş birlikleri ve önerileriniz için bizimle
+                iletişime geçin.</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="section">
+        <div class="container">
+            <div class="columns is-variable is-8">
+
+                <!-- Left Column: Info & Map -->
+                <div class="column is-5">
+                    <div class="box h-100 mobile-mb-4" style="border: none; box-shadow: 0 5px 20px rgba(0,0,0,0.05);">
+                        <h3 class="title is-4 mb-5" style="color: var(--korfez-navy);">İletişim Bilgileri</h3>
+
+                        <div class="media mb-4">
+                            <div class="media-left">
+                                <span class="icon is-large has-text-danger">
+                                    <i class="fas fa-map-marker-alt fa-2x"></i>
+                                </span>
+                            </div>
+                            <div class="media-content">
+                                <p class="heading">Adres</p>
+                                <p class="subtitle is-6">Cumhuriyet Mah. 83. Sok.<br>Prestij Park Evleri A Blok No:
+                                    23-A/6<br>Atakum / Samsun</p>
+                            </div>
+                        </div>
+
+                        <div class="media mb-4">
+                            <div class="media-left">
+                                <span class="icon is-large has-text-danger">
+                                    <i class="fas fa-phone-alt fa-2x"></i>
+                                </span>
+                            </div>
+                            <div class="media-content">
+                                <p class="heading">Telefonlar</p>
+                                <p class="subtitle is-6 mb-1"><img src="https://flagcdn.com/16x12/tr.png" class="mr-2">
+                                    +90 534 225 79 11</p>
+                                <p class="subtitle is-6 mb-1"><img src="https://flagcdn.com/16x12/qa.png" class="mr-2">
+                                    +974 7725 4049 (Katar)</p>
+                                <p class="subtitle is-6"><img src="https://flagcdn.com/16x12/jo.png" class="mr-2"> +962
+                                    79 5551432 (Ürdün)</p>
+                            </div>
+                        </div>
+
+                        <div class="media mb-5">
+                            <div class="media-left">
+                                <span class="icon is-large has-text-danger">
+                                    <i class="fas fa-envelope fa-2x"></i>
+                                </span>
+                            </div>
+                            <div class="media-content">
+                                <p class="heading">E-posta</p>
+                                <p class="subtitle is-6">info@korfez.biz</p>
+                            </div>
+                        </div>
+
+                        <!-- Map Placeholder -->
+                        <div class="map-container"
+                            style="height: 250px; background-color: #eee; border-radius: 8px; position: relative; overflow: hidden;">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47986.99436323497!2d36.2752945!3d41.3323049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40887803020610f9%3A0xe549925206248386!2sAtakum%2C%20Samsun!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Right Column: Form -->
+                <div class="column is-7">
+                    <div class="box p-5" style="border-top: 5px solid var(--korfez-red);">
+                        <h3 class="title is-4 mb-5" style="color: var(--korfez-navy);">Mesaj Gönderin</h3>
+                        <form action="#" method="POST">
+                            <div class="columns is-multiline">
+                                <div class="column is-6">
+                                    <div class="field">
+                                        <label class="label">Adınız Soyadınız</label>
+                                        <div class="control has-icons-left">
+                                            <input class="input" type="text" placeholder="Adınız Soyadınız" required>
+                                            <span class="icon is-small is-left"><i class="fas fa-user"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-6">
+                                    <div class="field">
+                                        <label class="label">E-posta Adresiniz</label>
+                                        <div class="control has-icons-left">
+                                            <input class="input" type="email" placeholder="ornek@sirket.com" required>
+                                            <span class="icon is-small is-left"><i class="fas fa-envelope"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-12">
+                                    <div class="field">
+                                        <label class="label">Konu</label>
+                                        <div class="control">
+                                            <div class="select is-fullwidth">
+                                                <select>
+                                                    <option>Genel Bilgi Talebi</option>
+                                                    <option>Üyelik İşlemleri</option>
+                                                    <option>Teknik Destek</option>
+                                                    <option>İş Birliği Teklifi</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-12">
+                                    <div class="field">
+                                        <label class="label">Mesajınız</label>
+                                        <div class="control">
+                                            <textarea class="textarea" placeholder="Mesajınızı buraya yazın..."
+                                                rows="5"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-12">
+                                    <button class="button is-danger is-medium is-rounded is-fullwidth shadow-button">
+                                        <span class="icon"><i class="fas fa-paper-plane"></i></span>
+                                        <span>GÖNDER</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as index) -->
+    <footer class="korfez-footer">
+        <div class="footer-main section">
+            <div class="container">
+                <div class="columns is-variable is-4">
+                    <div class="column is-3 footer-col">
+                        <div class="footer-logo mb-5">
+                            <img src="images/logo-footer.png" alt="Körfez.biz" style="max-height: 80px;">
+                        </div>
+                        <div class="footer-info">
+                            <p class="mb-2"><span class="fl-label">Adres :</span> Atakum, Samsun / Türkiye</p>
+                            <p class="mb-2"><span class="fl-label">Tel :</span> +90 534 225 79 11</p>
+                            <p class="mb-2"><span class="fl-label">Mail :</span> info@korfez.biz</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container is-fluid p-0 h-100">
+                <div class="footer-bar-wrapper">
+                    <div class="copyright-text">
+                        &copy; 2025 Körfez Canlı Ltd. Şti. Tüm hakları saklıdır.
+                    </div>
+                    <div class="url-tab"><span>www.korfez.biz</span></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky Bottom Actions -->
+    <div class="mobile-sticky-actions is-hidden-desktop">
+        <div class="columns is-gapless is-mobile">
+            <div class="column">
+                <a href="register.html" class="button is-link is-fullwidth is-radiusless h-100">
+                    <span class="icon"><i class="fas fa-user-tie"></i></span>
+                    <span>ALICI OL</span>
+                </a>
+            </div>
+            <div class="column">
+                <a href="register.html" class="button is-danger is-fullwidth is-radiusless h-100">
+                    <span class="icon"><i class="fas fa-store"></i></span>
+                    <span>SATICI OL</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <style>
+        .shadow-button {
+            box-shadow: 0 4px 14px 0 rgba(227, 6, 19, 0.39);
+        }
+    </style>
+</body>
+
+</html>
